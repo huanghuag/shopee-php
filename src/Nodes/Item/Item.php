@@ -17,6 +17,16 @@ class Item extends NodeAbstract
     {
         return $this->post('/api/v1/item/add', $parameters);
     }
+    /**
+     * Initialize a non-tier-variation item to a tier-variation item.
+     *
+     * @param array|Parameters\tierVarInit $parameters
+     * @return ResponseData
+     */
+    public function tierVarInit($parameters = []): ResponseData
+    {
+        return $this->post('/api/v1/item/tier_var/init', $parameters);
+    }
 
     /**
      * Use this call to add product item images.
